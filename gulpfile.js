@@ -1,5 +1,4 @@
 // gulp4 configure 
-
 const { series, parallel, src, dest, watch} = require('gulp');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
