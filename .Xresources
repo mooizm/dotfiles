@@ -1,3 +1,4 @@
+# Need to make the font bigger 
 xterm*font: *-fixed-*-*-*-18-*
 xterm.vt100.boldMode: false
 xterm*saveLines: 1024
@@ -12,9 +13,7 @@ xterm*VT100.geometry: 85x28
 xterm*title: xterm
 xterm*utf8: true
 
-# From below
-# https://github.com/raphamorim/lucario/blob/master/xterm/.Xresources
-
+# From below is lucario theme. https://github.com/raphamorim/lucario/blob/master/xterm/.Xresources
 xterm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
 xterm*termName: xterm-color
 xterm*eightBitInput: false
