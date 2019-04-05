@@ -1,4 +1,4 @@
-# Need to make the font bigger 
+# Need to make the font bigger, you don't need .Xresources if you have .Xdefault. 
 xterm*font: *-fixed-*-*-*-18-*
 xterm.vt100.boldMode: false
 xterm*saveLines: 1024
