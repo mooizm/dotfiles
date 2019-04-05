@@ -1,0 +1,17 @@
+# Simple, Easy! 
+
+xterm*Background:black
+xterm*Foreground:light grey
+xterm.vt100.boldMode: false
+xterm*font: *-fixed-*-*-*-18-*
+xterm*saveLines: 1024
+xterm*sessionMgt: false
+xterm*metaSendsEscape: false
+xterm*utf8Title: true
+xterm*preeditType: Root
+Xft dpi:96
+xterm*SaveLines: 1000
+xterm*multiClickTime: 250
+xterm*VT100.geometry: 85x28
+xterm*title: xterm
+xterm*utf8: true
