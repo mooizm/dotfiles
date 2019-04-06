@@ -1,0 +1,67 @@
+--[[
+# Conky, a system monitor, based on torsmo
+#
+# Any original torsmo code is licensed under the BSD license
+#
+# All code written since the fork of torsmo is licensed under the GPL
+#
+# Please see COPYING for details
+#
+# Copyright (c) 2004, Hannu Saransaari and Lauri Hakkarainen
+# Copyright (c) 2005-2010 Brenden Matthews, Philip Kovacs, et. al. (see AUTHORS)
+# All rights reserved.
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+]]
+conky.config = {
+	alignment = 'bottom_left',
+	background = false,
+	border_width = 1,
+	cpu_avg_samples = 2,
+	default_color ='white',
+	default_outline_color ='white',
+	default_shade_color ='white',
+	draw_borders = false,
+	draw_graph_borders = true,
+	draw_outline = false,
+	draw_shades = false,
+	use_xft = true,
+	font = 'Roboto Light:size =10',
+	text_buffer_size = 256,
+	double_buffer = true,
+	gap_x = 10,
+	gap_y = 20,
+	net_avg_samples = 2,
+	no_buffers = true,
+	out_to_console = false,
+	out_to_stderr =  false,
+	extra_newline = false,
+	own_window = false,
+	own_window_class = 'Conky',
+    own_window_type = 'desktop',
+	own_window_transparent = true,
+	stippled_borders = 0,
+	update_interval = 1.0,
+	uppercase = false,
+	use_spacer = 'none',
+	show_graph_scale = false,
+	show_graph_range =  false
+}
+
+conky.text = [[
+	${font Roboto:style=Regular:size=90}${time %H}${font Roboto:style=Thin:size=55}:${font Roboto:style=Thin:size=55}${time %M}${font} 
+	${voffset 12}${offset 30}${font Roboto:style=Light:size=13}${time %A} ${font Roboto:style=Black:size=13}${time %e} ${font Roboto:style=Light:size=13}${time %B}${font}
+
+	${font Roboto:style=Regular:size=10}$sysname $kernel  $acpitemp°C | ${color lightgrey}Up time:$color $uptime ${color lightgrey}${color lightgrey}CPU: Usage:${color #FFFFFF} $cpu% ${color lightgrey} ${color lightgrey}Processes:$color $processes  ${color grey}Running:$color $running_processes RAM Usage:$color $mem/$memmax - $memperc% ${color lightgrey}Swap Usage: $color$swap/$swapmax - $swapperc%  ${color lightgrey}File system: $color${fs_used /}/${fs_size /} ${color lightgrey}Free:$color${fs_free} ${color lightgrey}IP$color: ${addr wlan0} ${color lightgrey}Total Down / Up$color: ${color #ddaa00}${totaldown wlan0} + ${color #ddaa00}${totalup wlan0}  ${color lightgrey}Down / Up$color: ${downspeed wlan0}:${upspeed wlan0}${font}
+]]
