@@ -13,27 +13,34 @@ alias dev='cd /root/dev'
 # Git branch status
 
 # Colors
-COLOR_RED="\033[0;31m"
-COLOR_YELLOW="\033[0;33m"
-COLOR_GREEN="\033[0;32m"
+
+#COLOR_RED="\033[0;31m"
+#COLOR_YELLOW="\033[0;33m"
+#COLOR_GREEN="\033[0;32m"
+
+COLOR_RED=$'\001\e[0;31m\002'
+COLOR_YELLOW=$'\001\e[0;33m\002'
+COLOR_GREEN=$'\001\e[0;32m\002'
+COLOR_WHITE=$'001\e[0;37m]\002'
 
 # Get current branch in git repo
 function parse_git_branch() {
+	COLOR=${COLOR_WHITE}
 	BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
 	git_status=`git status 2> /dev/null`
 
 	if [[ ${git_status} =~ "working tree clean" ]]; then
-		state="${COLOR_GREEN}"
+		COLOR="${COLOR_GREEN}"
 	elif [[ ${git_status} =~ "Changes to be committed" ]]; then
-		state="${COLOR_YELLOW}"
+		COLOR="${COLOR_YELLOW}"
 	else
-		state="${COLOR_RED}"
+		COLOR="${COLOR_RED}"
 	fi
 
 	if [ ! "${BRANCH}" == "" ]
 	then
 		STAT=`parse_git_dirty`
-		echo -e " ${state}(${BRANCH}${STAT})"
+		echo -e " ${COLOR}(${BRANCH}${STAT})"
 	else
 		echo ""
 	fi
