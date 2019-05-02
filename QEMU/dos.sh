@@ -5,4 +5,4 @@ qemu-system-i386 -m 64M -cpu pentium -boot d \
 #-drive format=raw,file=../FLOPPY.img,if=floppy,format=raw   \
 -soundhw sb16,adlib,pcspk \
 -vga std \
--name "Dos" \
+-name "DOS" \
