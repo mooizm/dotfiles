@@ -1,11 +1,15 @@
 #!/bin/bash
 
 set -e
-INSTALL_DIR="$HOME"
 
 download() {
   URL=https://raw.githubusercontent.com/mooizm/dotfiles/master/.bashrc
-  curl --progress-bar -L $URL -o $INSTALL_DIR
+  curl --progress-bar -L $URL -o $HOME/myBash
+}
+
+copyover() {
+  echo "$(cat $HOME/myBash)" >> $HOME/.bashrc
 }
 
 download
+copyover
