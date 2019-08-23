@@ -87,5 +87,4 @@ export PS1="\[\033[38;5;9m\]\u\[$(tput sgr0)\]\[\033[38;5;7m\]:\[$(tput sgr0)\]\
 alias ls='ls --color=auto'
 alias vi='vim'
 alias dev='cd /root/dev'
-
 dev
