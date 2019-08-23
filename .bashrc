@@ -5,11 +5,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
-alias vi='vim'
-alias dev='cd /root/dev'
-
-
 # Git branch status
 
 # Colors
@@ -87,4 +82,10 @@ function parse_git_dirty {
 export PS1="\[\033[38;5;9m\]\u\[$(tput sgr0)\]\[\033[38;5;7m\]:\[$(tput sgr0)\]\[\033[38;5;15m\][\W]\[$(tput sgr0)\]\$(parse_git_branch)\[$(tput sgr0)\] "
 
 # Gentoo like default Green@Blue
-export PS1="\[\033[38;5;10m\]\u\[$(tput sgr0)\]\[\033[38;5;10m\]@\h\[$(tput sgr0)\]\[\033[38;5;12m\] \w\[$(tput sgr0)\]\$(parse_git_branch)\[$(tput sgr0)\]\[\033[38;5;12m\] $\[$(tput sgr0)\] "
+# export PS1="\[\033[38;5;10m\]\u\[$(tput sgr0)\]\[\033[38;5;10m\]@\h\[$(tput sgr0)\]\[\033[38;5;12m\] \w\[$(tput sgr0)\]\$(parse_git_branch)\[$(tput sgr0)\]\[\033[38;5;12m\] $\[$(tput sgr0)\] "
+
+alias ls='ls --color=auto'
+alias vi='vim'
+alias dev='cd /root/dev'
+
+dev
