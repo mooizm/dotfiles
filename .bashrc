@@ -83,6 +83,8 @@ export PS1="\[\033[38;5;9m\]\u\[$(tput sgr0)\]\[\033[38;5;7m\]:\[$(tput sgr0)\]\
 # Gentoo like default Green@Blue
 # export PS1="\[\033[38;5;10m\]\u\[$(tput sgr0)\]\[\033[38;5;10m\]@\h\[$(tput sgr0)\]\[\033[38;5;12m\] \w\[$(tput sgr0)\]\$(parse_git_branch)\[$(tput sgr0)\]\[\033[38;5;12m\] $\[$(tput sgr0)\] "
 
+source /usr/share/bash-completion/completions/git 
+
 alias ls='ls --color=auto'
 alias vi='vim'
 alias dev='cd /root/dev'
