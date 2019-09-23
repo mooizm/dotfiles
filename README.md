@@ -7,7 +7,7 @@ curl -L https://github.com/mooizm/dotfiles/raw/master/myBash.sh | bash
 
 2) Install often used packages on WSL
 ```console
-sudo apt update && sudo apt upgrade && sudo apt install npm nodejs mariadb-server curl wget unzip vim git postgresql postgresql-client apache2 php python3
+sudo apt update && sudo apt upgrade && sudo apt install npm nodejs mariadb-server curl wget unzip vim git postgresql postgresql-client apache2 php python3 php-mysql
 ```
 3) create ssh new key
 
