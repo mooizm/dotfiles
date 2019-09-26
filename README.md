@@ -3,6 +3,7 @@
 1) Install often used packages on WSL
 ```console
 sudo apt update && sudo apt upgrade && sudo apt install npm nodejs mariadb-server curl wget unzip vim git postgresql postgresql-client apache
+```
 
 2) Install mybash 
 ```console
