@@ -1,7 +1,7 @@
 /**
   --- gulp4 configure ---
   npm install gulpjs/gulp-cli -g 
-  npm install -D @babel/core @babel/preset-env babelify browserify fancy-log gulp gulp@next gulp-autoprefixer gulp-sass gulp-uglify vinyl-buffer vinyl-source-stream watchify
+  npm install -D @babel/core @babel/preset-env babelify browserify fancy-log gulp gulp-autoprefixer gulp-sass gulp-uglify vinyl-buffer vinyl-source-stream watchify
 */
 const { series, parallel, src, dest, watch} = require('gulp');
 const sass = require('gulp-sass');
