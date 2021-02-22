@@ -87,5 +87,5 @@ source /usr/share/bash-completion/completions/git
 
 alias ls='ls --color=auto'
 alias vi='vim'
-alias dev='cd /mnt/c/Dev'
-dev
+#alias dev='cd /mnt/c/Dev'
+#dev
